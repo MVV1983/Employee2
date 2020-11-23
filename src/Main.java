@@ -8,7 +8,8 @@ public class Main {
         System.out.println("********************");
         System.out.println("1: Add employee");
         System.out.println("2: Print All Amployee");
-        System.out.println("3: Exit");
+        System.out.println("3: Print all salary for employee");
+        System.out.println("4: Exit");
     }
 
     //Create method to get Menu Option
@@ -59,7 +60,14 @@ public class Main {
                     printAllEmployee(nameList);
                     System.out.println("*****");
                     break;
-                case 3://Exit
+                case 3://Print salary
+                    System.out.println("Print salary");
+                    System.out.println("********************");
+                    //начислить зарплату бухгалтером всем сотрудникам в соответствии с их грэйдом
+                    Accountant.giveSalary(listEmployee);
+                    System.out.println("********************");
+                    break;
+                case 4://Exit
                     System.out.println("System exit");
                     break;
                 default:
@@ -67,11 +75,7 @@ public class Main {
             }
 
         }
-        while (op != 3);//Exit application if press 3
-
-
-        //начислить зарплату бухгалтером всем сотрудникам в соответствии с их грэйдом
-        Accountant.giveSalary(listEmployee);
+        while (op != 4);//Exit application if press 4
 
     }
 
