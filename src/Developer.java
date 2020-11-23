@@ -13,9 +13,10 @@ public class Developer implements Employee {
         return name;
     }
 
-    @Override
-    public double setWage() {
-        return 0;
+       @Override
+    public double setWage(double input) {
+        this.wage = input;
+        return input;
     }
 
 
