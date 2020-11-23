@@ -15,20 +15,17 @@ public class Accountant implements Employee {
     }
 
 
-    static void giveSalary(HashMap<Integer, Employee> employee) {
-        double wage = 0;
+   static void giveSalary(HashMap<Integer, Employee> employee) {
+
         for (Employee value : employee.values()) {
             if (value.getGrade() == 5) {
-                wage = 50000;
-                value.setWage();
+                value.setWage(50000);
             } else if (value.getGrade() == 4) {
-                wage = 40000;
-                value.setWage();
+                value.setWage(40000);
             } else if (value.getGrade() == 9) {
-                wage = 90000;
-                value.setWage();
+                value.setWage(90000);
             }
-            System.out.println(value.getName() + " Начислена зарплата с учетом Грэйда: " + wage);
+            System.out.println(value.getName() + " Начислена зарплата с учетом Грэйда: " + value.getWage());
         }
     }
 
@@ -43,27 +40,12 @@ public class Accountant implements Employee {
     }
 
     @Override
-    public double setWage() {
-        return 0;
+    public double setWage(double input) {
+        this.wage= input;
+        return input;
     }
 
     @Override
-    public String getJob() {
-        return job;
+    public double getWage() {
+       return wage;
     }
-
-    @Override
-    public void work() {
-
-    }
-
-    @Override
-    public void coffeeTime() {
-
-    }
-
-    @Override
-    public void print() {
-
-    }
-}
