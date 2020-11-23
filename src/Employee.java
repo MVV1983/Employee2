@@ -2,7 +2,8 @@ public interface Employee {
 
     int getGrade();
     String getName();
-    double setWage();
+    double setWage(double input);
+    double getWage();
     String getJob();
 
 
