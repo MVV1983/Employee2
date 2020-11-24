@@ -14,7 +14,6 @@ public class Accountant implements Employee {
         this.grade = grade;
     }
 
-
    static void giveSalary(HashMap<Integer, Employee> employee) {
 
         for (Employee value : employee.values()) {
@@ -40,12 +39,28 @@ public class Accountant implements Employee {
     }
 
     @Override
-    public double setWage(double input) {
+    public void setWage(double input) {
         this.wage= input;
-        return input;
     }
 
     @Override
     public double getWage() {
        return wage;
     }
+    @Override
+    public String getJob() {
+        return job;
+    }
+
+    @Override
+    public void work() {
+    }
+
+    @Override
+    public void coffeeTime() {
+    }
+
+    @Override
+    public void print() {
+    }
+}
