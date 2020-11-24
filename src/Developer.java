@@ -53,9 +53,7 @@ public class Developer implements Employee {
 
     @Override
     public void print() {
-        System.out.println("Имя сотрудника"+"    "+"Подразделение");
         System.out.println(name + "            " + job);
-
     }
 
     public void analyzeCode() {
