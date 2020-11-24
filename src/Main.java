@@ -73,6 +73,7 @@ public class Main {
                 case 2://Print All
                     System.out.println("Print all employee");
                     System.out.println("********************");
+                    System.out.println("Имя сотрудника"+"    "+"Подразделение");
                     //покажем имена всех сотрудников
                     printAllEmployee();//printAllEmployee(nameList);
                     System.out.println("********************");
