@@ -24,7 +24,7 @@ public class Accountant implements Employee {
             } else if (value.getGrade() == 9) {
                 value.setWage(90000);
             }
-            System.out.println(value.getName() + " Начислена зарплата с учетом Грэйда: " + value.getWage());
+            System.out.println(value.getName() + " Работающий в : " + value.getJob() + " Начислена зарплата с учетом Грэйда: " + value.getWage());
         }
     }
 
@@ -62,5 +62,7 @@ public class Accountant implements Employee {
 
     @Override
     public void print() {
+        System.out.println("Имя сотрудника"+"    "+"Подразделение");
+        System.out.println(name + "            " + job);
     }
 }
